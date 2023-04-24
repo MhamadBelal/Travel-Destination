@@ -8,7 +8,7 @@ function Home(props)
 return(
 <>
 <Header />
-<Tours data={props}/>
+<Tours data={props.data}/>
 <Footer />
 </>
 );

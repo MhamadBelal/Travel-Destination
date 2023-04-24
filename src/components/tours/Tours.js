@@ -5,7 +5,7 @@ function Tours(props)
 return(
 <>
 
-{props.data.data.map((tours)=>{
+{props.data.map((tours)=>{
     return(
         <div key={tours.id} className='sec'>
                         <h3>{tours.name}</h3>
