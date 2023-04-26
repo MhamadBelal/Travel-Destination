@@ -1,21 +1,16 @@
 import './Tours.css';
+import Tour from './tour/Tour';
 
 function Tours(props)
 {
 return(
 <>
 
-{props.data.map((tours)=>{
-    return(
-        <div key={tours.id} className='sec'>
-                        <h3>{tours.name}</h3>
-                        <img src={tours.image} alt={tours.name}></img>
-                        <p>Pice: {tours.price}</p>
-                    </div>
-    );
-}
-)
-}
+<Tour data={props.data} />
+<Tour data={props.data}  />
+<Tour data={props.data}  />
+<Tour data={props.data} />
+<Tour data={props.data} />
 </>
 );
 }
