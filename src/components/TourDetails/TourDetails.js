@@ -12,34 +12,31 @@ function TourDetails(props)
 return(
     <>
         {
-            props.data.map((element)=>
-            {
-                if(element.id==id)
+            props.data.filter((element)=> element.id==id).map(city=>{
                 return(
-                    <div key={element.id}>
-                    <h3>{element.name}</h3>
-                    <img src={element.image} alt={element.name} />
-                    <p>Pice: {element.price}</p>
+                    <div key={city.id}>
+                    <h3>{city.name}</h3>
+                    <img src={city.image} alt={city.name} />
+                    <p>Pice: {city.price}</p>
                     <div>
                         {
                             view?
                             <>
-                                <p>Description: {element.info}</p>
+                                <p>Description: {city.info}</p>
                                 <button onClick={()=>setView(false)}>Show Less</button>
                             </>
                             :
                             <>
-                                <p>Description: {(element.info).substring(0,200)}</p>
+                                <p>Description: {(city.info).substring(0,200)}</p>
                                 <button onClick={()=>setView(true)}>Show More</button>
                             </>
                         }
                     </div>
-                    
                     </div>
                 )
-                
-            }
-            )
+            })
+
+
         }
     </>
 )
