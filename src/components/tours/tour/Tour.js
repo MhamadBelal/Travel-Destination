@@ -5,11 +5,10 @@ function Tour(props)
 return(
     <>
     
-        <div key={props.data.id} className='sec'>
-            <h3>{props.data.name}</h3>
-            <img src={props.data.image} alt={props.data.name}></img>
-            <p>Pice: {props.data.price}</p>
-        </div>
+            <h3>{props.name}</h3>
+            <img src={props.image} alt={props.name} />
+            <p>Pice: {props.price}</p>
+
 
 </>
 );

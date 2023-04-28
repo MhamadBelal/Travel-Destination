@@ -2,4 +2,16 @@
 color:red;
 text-align: center;
 margin-bottom: 50px;
+align-self: center;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+}
+
+.link{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 100px;
 }
